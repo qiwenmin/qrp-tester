@@ -60,23 +60,23 @@ $EndComp
 $Comp
 L Device:R_Small R5
 U 1 1 5F93B7AD
-P 4650 2750
-F 0 "R5" H 4709 2796 50  0000 L CNN
-F 1 "10K" H 4709 2705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4650 2750 50  0001 C CNN
-F 3 "~" H 4650 2750 50  0001 C CNN
-	1    4650 2750
+P 4650 2800
+F 0 "R5" H 4709 2846 50  0000 L CNN
+F 1 "10K" H 4709 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4650 2800 50  0001 C CNN
+F 3 "~" H 4650 2800 50  0001 C CNN
+	1    4650 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R6
 U 1 1 5F93BD06
-P 5050 2750
-F 0 "R6" H 5109 2796 50  0000 L CNN
-F 1 "1K" H 5109 2705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5050 2750 50  0001 C CNN
-F 3 "~" H 5050 2750 50  0001 C CNN
-	1    5050 2750
+P 5050 2800
+F 0 "R6" H 5109 2846 50  0000 L CNN
+F 1 "1K" H 5109 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5050 2800 50  0001 C CNN
+F 3 "~" H 5050 2800 50  0001 C CNN
+	1    5050 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -307,10 +307,7 @@ F 3 "" H 3650 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 2400 3650 2600
-Wire Wire Line
 	3650 2850 3650 2950
-Connection ~ 3650 2600
 Wire Wire Line
 	3650 2600 3650 2650
 Wire Wire Line
@@ -340,56 +337,14 @@ Wire Wire Line
 	3650 1800 4650 1800
 Wire Wire Line
 	4650 1800 4650 1900
-Wire Wire Line
-	4650 2100 4650 2400
-Wire Wire Line
-	4650 2850 4650 2950
 Connection ~ 3650 1800
-$Comp
-L Transistor_BJT:MMBT3904 Q2
-U 1 1 5F9453E8
-P 4950 2400
-F 0 "Q2" H 5141 2446 50  0000 L CNN
-F 1 "MMBT3904" H 5141 2355 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5150 2325 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 4950 2400 50  0001 L CNN
-	1    4950 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 2200 3300 2200
-$Comp
-L Device:C_Small C5
-U 1 1 5F94B578
-P 4250 2400
-F 0 "C5" V 4350 2400 50  0000 C CNN
-F 1 "100p" V 4450 2450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4250 2400 50  0001 C CNN
-F 3 "~" H 4250 2400 50  0001 C CNN
-	1    4250 2400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3300 2200 3300 2400
-Wire Wire Line
-	3300 2400 3650 2400
-Wire Wire Line
-	4350 2400 4650 2400
 Connection ~ 3300 2200
 Wire Wire Line
 	3300 2200 3350 2200
-Connection ~ 4650 2400
-Wire Wire Line
-	4650 2400 4650 2650
-Connection ~ 3650 2400
-Wire Wire Line
-	3650 2400 4150 2400
-Wire Wire Line
-	4650 2400 4750 2400
 Wire Wire Line
 	4650 1800 5050 1800
-Wire Wire Line
-	5050 1800 5050 2200
 Connection ~ 4650 1800
 $Comp
 L Device:R_Small R9
@@ -491,18 +446,11 @@ F 3 "~" V 6500 3250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5050 2850 5050 2950
-Wire Wire Line
 	5050 3250 5050 3350
-Wire Wire Line
-	5050 2950 5150 2950
 Wire Wire Line
 	5350 2950 5450 2950
 Wire Wire Line
 	5750 2950 5850 2950
-Connection ~ 5050 2950
-Wire Wire Line
-	5050 2950 5050 3050
 Wire Wire Line
 	5450 2950 5450 3050
 Wire Wire Line
@@ -526,8 +474,6 @@ Wire Wire Line
 	6100 2950 6500 2950
 Wire Wire Line
 	6900 3150 6900 3350
-Wire Wire Line
-	5050 2600 5050 2650
 $Comp
 L power:GND #PWR015
 U 1 1 5F960DA1
@@ -796,4 +742,55 @@ F 3 "~" H 8600 3350 50  0001 C CNN
 	1    8600 3350
 	1    0    0    -1  
 $EndComp
+Connection ~ 3650 2600
+Wire Wire Line
+	3650 2400 3650 2600
+$Comp
+L Transistor_BJT:MMBT3904 Q2
+U 1 1 5F9453E8
+P 4950 2450
+F 0 "Q2" H 5141 2496 50  0000 L CNN
+F 1 "MMBT3904" H 5141 2405 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5150 2375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 4950 2450 50  0001 L CNN
+	1    4950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5F94B578
+P 4250 2450
+F 0 "C5" V 4350 2450 50  0000 C CNN
+F 1 "100p" V 4450 2500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4250 2450 50  0001 C CNN
+F 3 "~" H 4250 2450 50  0001 C CNN
+	1    4250 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 2900 4650 2950
+Wire Wire Line
+	4650 2100 4650 2450
+Wire Wire Line
+	5050 2650 5050 2700
+Wire Wire Line
+	5050 2900 5050 2950
+Wire Wire Line
+	5150 2950 5050 2950
+Connection ~ 5050 2950
+Wire Wire Line
+	5050 2950 5050 3050
+Wire Wire Line
+	5050 1800 5050 2250
+Wire Wire Line
+	4750 2450 4650 2450
+Connection ~ 4650 2450
+Wire Wire Line
+	4650 2450 4650 2700
+Wire Wire Line
+	4650 2450 4350 2450
+Wire Wire Line
+	4150 2450 3300 2450
+Wire Wire Line
+	3300 2200 3300 2450
 $EndSCHEMATC
